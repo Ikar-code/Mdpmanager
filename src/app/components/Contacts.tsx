@@ -59,34 +59,7 @@ export function Contacts() {
     phone: '',
   });
 
-  const [contacts, setContacts] = useState<Contact[]>([
-    {
-      id: '1',
-      name: 'Marie Dubois',
-      email: 'marie.dubois@example.com',
-      phone: '+33 6 12 34 56 78',
-      initials: 'MD',
-      color: '#1976d2',
-      sharedPasswords: 3,
-    },
-    {
-      id: '2',
-      name: 'Jean Martin',
-      email: 'jean.martin@example.com',
-      initials: 'JM',
-      color: '#dc004e',
-      sharedPasswords: 1,
-    },
-    {
-      id: '3',
-      name: 'Sophie Bernard',
-      email: 'sophie.bernard@example.com',
-      phone: '+33 6 98 76 54 32',
-      initials: 'SB',
-      color: '#388e3c',
-      sharedPasswords: 5,
-    },
-  ]);
+  const [contacts, setContacts] = useState<Contact[]>([]);
 
   const handleAddContact = () => {
     if (newContact.name && newContact.email) {
@@ -311,15 +284,16 @@ export function Contacts() {
           open={Boolean(anchorEl)}
           onClose={() => setAnchorEl(null)}
         >
-          <MenuItem>
+          <MenuItem key="edit">
             <Edit sx={{ mr: 1 }} fontSize="small" />
             Modifier
           </MenuItem>
-          <MenuItem>
+          <MenuItem key="share">
             <Group sx={{ mr: 1 }} fontSize="small" />
             Partager un mot de passe
           </MenuItem>
           <MenuItem
+            key="delete"
             onClick={() => selectedContact && handleDeleteContact(selectedContact.id)}
           >
             <Delete sx={{ mr: 1 }} fontSize="small" color="error" />

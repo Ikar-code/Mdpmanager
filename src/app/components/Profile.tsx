@@ -17,10 +17,10 @@ export function Profile() {
   const navigate = useNavigate();
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState({
-    name: 'Utilisateur',
-    email: 'user@example.com',
-    phone: '+33 6 12 34 56 78',
-    createdAt: new Date('2024-01-15'),
+    name: '',
+    email: '',
+    phone: '',
+    createdAt: new Date(),
   });
 
   const handleSave = () => {
@@ -154,7 +154,7 @@ export function Profile() {
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 3, mt: 3 }}>
               <Box sx={{ textAlign: 'center' }}>
                 <Typography variant="h4" color="primary" fontWeight={600}>
-                  23
+                  0
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Mots de passe
@@ -162,7 +162,7 @@ export function Profile() {
               </Box>
               <Box sx={{ textAlign: 'center' }}>
                 <Typography variant="h4" color="primary" fontWeight={600}>
-                  8
+                  0
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Catégories
@@ -170,7 +170,7 @@ export function Profile() {
               </Box>
               <Box sx={{ textAlign: 'center' }}>
                 <Typography variant="h4" color="primary" fontWeight={600}>
-                  5
+                  0
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Favoris

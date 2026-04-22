@@ -56,38 +56,7 @@ export function Dashboard() {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   const [openAddDialog, setOpenAddDialog] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const [passwords, setPasswords] = useState<Password[]>([
-    {
-      id: '1',
-      title: 'Gmail',
-      username: 'user@gmail.com',
-      password: 'SecurePass123!',
-      website: 'https://gmail.com',
-      category: 'Email',
-      lastModified: new Date(),
-      isFavorite: true,
-    },
-    {
-      id: '2',
-      title: 'Facebook',
-      username: 'user@email.com',
-      password: 'Fb_Pass456#',
-      website: 'https://facebook.com',
-      category: 'Réseaux sociaux',
-      lastModified: new Date(),
-      isFavorite: false,
-    },
-    {
-      id: '3',
-      title: 'Banque en ligne',
-      username: 'client123',
-      password: 'Bank$ecure789',
-      website: 'https://mabanque.fr',
-      category: 'Banque',
-      lastModified: new Date(),
-      isFavorite: true,
-    },
-  ]);
+  const [passwords, setPasswords] = useState<Password[]>([]);
 
   const categories = [
     'Tous',
@@ -182,7 +151,7 @@ export function Dashboard() {
       </List>
 
       <List sx={{ borderTop: 1, borderColor: 'divider' }}>
-        <ListItem disablePadding>
+        <ListItem key="menu-contacts" disablePadding>
           <ListItemButton onClick={() => navigate('/contacts')}>
             <ListItemIcon>
               <People />
@@ -190,7 +159,7 @@ export function Dashboard() {
             <ListItemText primary="Contacts" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem key="menu-messages" disablePadding>
           <ListItemButton onClick={() => navigate('/messages')}>
             <ListItemIcon>
               <Message />
@@ -198,7 +167,7 @@ export function Dashboard() {
             <ListItemText primary="Messages" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem key="menu-settings" disablePadding>
           <ListItemButton onClick={() => navigate('/settings')}>
             <ListItemIcon>
               <Settings />
@@ -206,7 +175,7 @@ export function Dashboard() {
             <ListItemText primary="Paramètres" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem key="menu-legal" disablePadding>
           <ListItemButton onClick={() => navigate('/legal')}>
             <ListItemIcon>
               <Gavel />
@@ -276,19 +245,19 @@ export function Dashboard() {
             open={Boolean(anchorEl)}
             onClose={() => setAnchorEl(null)}
           >
-            <MenuItem onClick={() => navigate('/profile')}>
+            <MenuItem key="profile" onClick={() => navigate('/profile')}>
               <ListItemIcon>
                 <AccountCircle />
               </ListItemIcon>
               Mon profil
             </MenuItem>
-            <MenuItem onClick={() => navigate('/settings')}>
+            <MenuItem key="settings" onClick={() => navigate('/settings')}>
               <ListItemIcon>
                 <Settings />
               </ListItemIcon>
               Paramètres
             </MenuItem>
-            <MenuItem onClick={() => navigate('/')}>
+            <MenuItem key="logout" onClick={() => navigate('/')}>
               <ListItemIcon>
                 <Logout />
               </ListItemIcon>

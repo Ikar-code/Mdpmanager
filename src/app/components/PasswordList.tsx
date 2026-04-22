@@ -266,19 +266,19 @@ export function PasswordList({ passwords, onUpdate, onDelete }: PasswordListProp
       </Box>
 
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-        <MenuItem onClick={() => selectedPassword && handleToggleFavorite(selectedPassword)}>
+        <MenuItem key="favorite" onClick={() => selectedPassword && handleToggleFavorite(selectedPassword)}>
           <ListItemIcon>
             {selectedPassword?.isFavorite ? <Star /> : <StarBorder />}
           </ListItemIcon>
           {selectedPassword?.isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris'}
         </MenuItem>
-        <MenuItem onClick={handleEditOpen}>
+        <MenuItem key="edit" onClick={handleEditOpen}>
           <ListItemIcon>
             <Edit />
           </ListItemIcon>
           Modifier
         </MenuItem>
-        <MenuItem onClick={handleDeleteOpen}>
+        <MenuItem key="delete" onClick={handleDeleteOpen}>
           <ListItemIcon>
             <Delete color="error" />
           </ListItemIcon>

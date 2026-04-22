@@ -126,37 +126,37 @@ export function Legal() {
                   Conformément au RGPD, vous disposez des droits suivants :
                 </Typography>
                 <List>
-                  <ListItem>
+                  <ListItem key="droit-acces">
                     <ListItemText
                       primary="Droit d'accès"
                       secondary="Vous pouvez accéder à vos données personnelles"
                     />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="droit-rectification">
                     <ListItemText
                       primary="Droit de rectification"
                       secondary="Vous pouvez corriger vos données inexactes"
                     />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="droit-effacement">
                     <ListItemText
                       primary="Droit à l'effacement"
                       secondary="Vous pouvez demander la suppression de vos données"
                     />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="droit-limitation">
                     <ListItemText
                       primary="Droit à la limitation"
                       secondary="Vous pouvez limiter le traitement de vos données"
                     />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="droit-portabilite">
                     <ListItemText
                       primary="Droit à la portabilité"
                       secondary="Vous pouvez récupérer vos données dans un format structuré"
                     />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="droit-opposition">
                     <ListItemText
                       primary="Droit d'opposition"
                       secondary="Vous pouvez vous opposer au traitement de vos données"
@@ -196,13 +196,13 @@ export function Legal() {
                   Nous collectons les données suivantes :
                 </Typography>
                 <List>
-                  <ListItem>
+                  <ListItem key="donnees-identification">
                     <ListItemText primary="Données d'identification : nom, prénom, email" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="donnees-connexion">
                     <ListItemText primary="Données de connexion : adresse IP, logs" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="donnees-chiffrees">
                     <ListItemText primary="Données chiffrées : vos mots de passe sont stockés de manière sécurisée et chiffrée" />
                   </ListItem>
                 </List>
@@ -214,16 +214,16 @@ export function Legal() {
                   Vos données sont utilisées pour :
                 </Typography>
                 <List>
-                  <ListItem>
+                  <ListItem key="finalite-compte">
                     <ListItemText primary="Gérer votre compte utilisateur" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="finalite-securite">
                     <ListItemText primary="Assurer la sécurité de vos mots de passe" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="finalite-amelioration">
                     <ListItemText primary="Améliorer nos services" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="finalite-communications">
                     <ListItemText primary="Vous envoyer des communications importantes" />
                   </ListItem>
                 </List>
@@ -253,13 +253,13 @@ export function Legal() {
                   Nous ne partageons jamais vos données avec des tiers, sauf :
                 </Typography>
                 <List>
-                  <ListItem>
+                  <ListItem key="partage-consentement">
                     <ListItemText primary="Avec votre consentement explicite" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="partage-legal">
                     <ListItemText primary="Pour respecter une obligation légale" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="partage-prestataires">
                     <ListItemText primary="Avec nos prestataires techniques, sous contrat strict de confidentialité" />
                   </ListItem>
                 </List>
@@ -370,16 +370,16 @@ export function Legal() {
                   Vous vous engagez à :
                 </Typography>
                 <List>
-                  <ListItem>
+                  <ListItem key="engagement-destination">
                     <ListItemText primary="Utiliser le service conformément à sa destination" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="engagement-securite">
                     <ListItemText primary="Ne pas porter atteinte à la sécurité du service" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="engagement-legal">
                     <ListItemText primary="Ne pas utiliser le service à des fins illégales" />
                   </ListItem>
-                  <ListItem>
+                  <ListItem key="engagement-propriete">
                     <ListItemText primary="Respecter les droits de propriété intellectuelle" />
                   </ListItem>
                 </List>

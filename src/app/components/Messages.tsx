@@ -61,62 +61,9 @@ export function Messages() {
   const [newGroupDialogOpen, setNewGroupDialogOpen] = useState(false);
   const [newGroupName, setNewGroupName] = useState('');
 
-  const [conversations, setConversations] = useState<Conversation[]>([
-    {
-      id: '1',
-      name: 'Marie Dubois',
-      lastMessage: 'Merci pour le partage !',
-      timestamp: new Date(Date.now() - 1000 * 60 * 5),
-      unread: 2,
-      avatar: 'MD',
-      color: '#1976d2',
-      isGroup: false,
-    },
-    {
-      id: '2',
-      name: 'Équipe Marketing',
-      lastMessage: 'Le mot de passe a été mis à jour',
-      timestamp: new Date(Date.now() - 1000 * 60 * 60),
-      unread: 0,
-      avatar: 'EM',
-      color: '#388e3c',
-      isGroup: true,
-      members: 5,
-    },
-    {
-      id: '3',
-      name: 'Jean Martin',
-      lastMessage: 'OK, je vais vérifier',
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2),
-      unread: 0,
-      avatar: 'JM',
-      color: '#dc004e',
-      isGroup: false,
-    },
-  ]);
+  const [conversations, setConversations] = useState<Conversation[]>([]);
 
-  const [messages, setMessages] = useState<Record<string, Message[]>>({
-    '1': [
-      {
-        id: '1',
-        text: 'Bonjour, peux-tu me partager le mot de passe du compte Gmail ?',
-        sender: 'other',
-        timestamp: new Date(Date.now() - 1000 * 60 * 10),
-      },
-      {
-        id: '2',
-        text: 'Bien sûr, je te le partage tout de suite',
-        sender: 'me',
-        timestamp: new Date(Date.now() - 1000 * 60 * 8),
-      },
-      {
-        id: '3',
-        text: 'Merci pour le partage !',
-        sender: 'other',
-        timestamp: new Date(Date.now() - 1000 * 60 * 5),
-      },
-    ],
-  });
+  const [messages, setMessages] = useState<Record<string, Message[]>>({});
 
   const handleSendMessage = () => {
     if (messageText.trim() && selectedConversation) {

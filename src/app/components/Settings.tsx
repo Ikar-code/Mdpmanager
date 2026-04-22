@@ -136,10 +136,10 @@ export function Settings() {
                     label="Délai de verrouillage"
                     onChange={(e) => setSettings({ ...settings, autoLockTime: e.target.value })}
                   >
-                    <MenuItem value="1">1 minute</MenuItem>
-                    <MenuItem value="5">5 minutes</MenuItem>
-                    <MenuItem value="10">10 minutes</MenuItem>
-                    <MenuItem value="30">30 minutes</MenuItem>
+                    <MenuItem key="lock-1" value="1">1 minute</MenuItem>
+                    <MenuItem key="lock-5" value="5">5 minutes</MenuItem>
+                    <MenuItem key="lock-10" value="10">10 minutes</MenuItem>
+                    <MenuItem key="lock-30" value="30">30 minutes</MenuItem>
                   </Select>
                 </FormControl>
               )}
@@ -296,9 +296,9 @@ export function Settings() {
                   label="Langue"
                   onChange={(e) => setSettings({ ...settings, language: e.target.value })}
                 >
-                  <MenuItem value="fr">Français</MenuItem>
-                  <MenuItem value="en">English</MenuItem>
-                  <MenuItem value="es">Español</MenuItem>
+                  <MenuItem key="lang-fr" value="fr">Français</MenuItem>
+                  <MenuItem key="lang-en" value="en">English</MenuItem>
+                  <MenuItem key="lang-es" value="es">Español</MenuItem>
                 </Select>
               </FormControl>
             </Box>
